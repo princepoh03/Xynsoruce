@@ -5,7 +5,7 @@ import time
 
 app = Flask(__name__)
 
-key_regex = r'let content = \("([^"]+)"\);'
+key_regex = r'let content = "([^"]+)";'
 
 def fetch(url, headers):
     try:
@@ -77,4 +77,4 @@ def bypass():
         return jsonify({"message": "Please Enter Fluxus Link!"})
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
+    app.run()
